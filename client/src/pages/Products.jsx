@@ -74,7 +74,6 @@ function Products() {
                     <Typography className="description" variant="body1">
                       {phone.description}
                     </Typography>
-                    <Typography variant="body1">{phone.color}</Typography>
                   </CardContent>
                   <CardActions sx={{ display: "flex", justifyContent: "center" }}>
                     <Link to={`/${phone.id}`}>
