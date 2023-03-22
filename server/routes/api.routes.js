@@ -1,11 +1,15 @@
 const router = require("express").Router();
+const phones = require("../data/phones.json");
 
 router.get("/phones", (req, res) => {
-  res.json("All good in here");
+  res.status(200).json(phones);
 });
 
 router.get("/phones/:id", (req, res) => {
-  res.json("All good in here");
+  const { id } = req.params;
+  const selectedPhone = phones.find((phone) => phone.id === Number(id));
+  console.log(selectedPhone);
+  res.status(200).json(selectedPhone);
 });
 
 module.exports = router;
